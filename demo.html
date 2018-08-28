@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>分页</title>
+  <link rel="stylesheet" href="http://par5l10v3.bkt.clouddn.com/ued.css"/>
+</head>
+<body>
+<div id="pagination"></div>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script>
+  Pagination({
+    activeIndex: 1, // 当前活动页
+    totalPage: 10, // 分页总页数
+    showNumberOfPage: true, // 是否可切换每页数量，boolen类型
+    father: '#pagination', // 插槽id
+    goToPage: function (index) {
+      // 切换分页回调函数，index为要去第几页
+      alert(index);
+    },
+    changeNumberOfPage: function (val) {
+      // 改变每页显示数量回调函数
+      alert(val);
+    }
+  })
+</script>
+</body>
+</html>
